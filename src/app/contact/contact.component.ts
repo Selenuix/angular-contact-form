@@ -1,23 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+	selector: 'app-contact',
+	templateUrl: './contact.component.html',
+	styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-	lastname: string;
-	firstName: string;
+	lastname: string | undefined;
+	firstName: string | undefined;
 	birthDate: any;
 	amount: any;
-	address: string;
-	postCode: number;
-	city: string;
-	
+	address: string | undefined;
+	postCode: number | undefined;
+	city: string | undefined;
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+	constructor() {
+	}
 
+	ngOnInit(): void {
+	}
+
+	processForm() {
+		const allInfo = `My name is ${this.lastname}`;
+		alert(allInfo);
+	}
 }

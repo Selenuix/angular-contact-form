@@ -1,40 +1,44 @@
 <section class="contact">
 	<h1>Contact</h1>
 
-	<form method="post" action="#">
+	<form (ngSubmit)="processForm()">
 		<div>
 			<label for="lastName">Nom :</label>
-			<input type="text" name="lastname" id="lastname" [(ngModel)]="lastname">
+			<input type="text" name="lastname" id="lastname" required maxlength="40" [(ngModel)]="lastname">
 		</div>
 
 		<div>
 			<label for="firstName">Prénom :</label>
-			<input type="text" name="firstName" id="firstName" [(ngModel)]="firstName">
+			<input type="text" name="firstName" id="firstName" required maxlength="40" [(ngModel)]="firstName">
 		</div>
 
 		<div>
 			<label for="birthDate">Date de naissance : </label>
-			<input type="date" name="birthDate" id="birthDate" [(ngModel)]="birthDate">
+			<input type="date" name="birthDate" id="birthDate" required [(ngModel)]="birthDate">
 		</div>
 
 		<div>
 			<label for="amount">Montant : </label>
-			<input type="number" name="amount" id="amount" [(ngModel)]="amount">
+			<input type="number" name="amount" id="amount" required  [(ngModel)]="amount">
 		</div>
 
 		<div>
 			<label for="address">Adresse : </label>
-			<input type="text" name="address" id="address" [(ngModel)]="address">
+			<input type="text" name="address" id="address" required maxlength="150" [(ngModel)]="address">
 		</div>
 
 		<div>
 			<label for="postCode">Code postal : </label>
-			<input type="number" name="postCode" id="postCode" [(ngModel)]="postCode">
+			<input type="number" name="postCode" id="postCode" required maxlength="5" [(ngModel)]="postCode">
 		</div>
 
 		<div>
 			<label for="city">Ville : </label>
-			<input type="text" name="city" id="city" [(ngModel)]="city">
+			<input type="text" name="city" id="city" required  maxlength="75" [(ngModel)]="city">
+		</div>
+
+		<div>
+			<button type="submit">Valider</button>
 		</div>
 	</form>
 </section>
