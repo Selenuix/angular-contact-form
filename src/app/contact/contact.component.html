@@ -4,37 +4,37 @@
 	<form method="post" action="#">
 		<div>
 			<label for="lastName">Nom :</label>
-			<input type="text" name="lastname" id="lastname">
+			<input type="text" name="lastname" id="lastname" [(ngModel)]="lastname">
 		</div>
 
 		<div>
 			<label for="firstName">Prénom :</label>
-			<input type="text" name="firstName" id="firstName">
+			<input type="text" name="firstName" id="firstName" [(ngModel)]="firstName">
 		</div>
 
 		<div>
 			<label for="birthDate">Date de naissance : </label>
-			<input type="date" name="birthDate" id="birthDate">
+			<input type="date" name="birthDate" id="birthDate" [(ngModel)]="birthDate">
 		</div>
 
 		<div>
 			<label for="amount">Montant : </label>
-			<input type="number" name="amount" id="amount">
+			<input type="number" name="amount" id="amount" [(ngModel)]="amount">
 		</div>
 
 		<div>
 			<label for="address">Adresse : </label>
-			<input type="text" name="address" id="address">
+			<input type="text" name="address" id="address" [(ngModel)]="address">
 		</div>
 
 		<div>
 			<label for="postCode">Code postal : </label>
-			<input type="number" name="postCode" id="postCode">
+			<input type="number" name="postCode" id="postCode" [(ngModel)]="postCode">
 		</div>
 
 		<div>
 			<label for="city">Ville : </label>
-			<input type="text" name="city" id="city">
+			<input type="text" name="city" id="city" [(ngModel)]="city">
 		</div>
 	</form>
 </section>
