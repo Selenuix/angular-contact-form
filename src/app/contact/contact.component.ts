@@ -14,7 +14,6 @@ export class ContactComponent implements OnInit {
 	postCode: number | undefined;
 	city: string | undefined;
 
-
 	constructor() {
 	}
 
@@ -22,7 +21,7 @@ export class ContactComponent implements OnInit {
 	}
 
 	processForm() {
-		const allInfo = `My name is ${this.lastname}`;
+		const allInfo = `My name is ${this.lastname} ${this.firstName}. I was born on ${this.birthDate}. I paid \$ ${this.amount}. The order has to be delivered in ${this.address}, ${this.postCode} ${this.city}`;
 		alert(allInfo);
 	}
 }
