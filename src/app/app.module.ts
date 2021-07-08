@@ -1,20 +1,17 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ContactComponent } from './contact/contact.component';
+import { DynamicFormComponent } from './dynamic-form.component';
+import { DynamicFormContactComponent } from './dynamic-form-contact.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ContactComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	imports: [ BrowserModule, ReactiveFormsModule ],
+	declarations: [ AppComponent, DynamicFormComponent, DynamicFormContactComponent ],
+	bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+	constructor() {
+	}
+}
