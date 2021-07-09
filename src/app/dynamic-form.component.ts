@@ -1,14 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import {Component, Input, OnInit} from '@angular/core';
+import {FormGroup} from '@angular/forms';
 
-import { FormBase } from './form-base';
-import { ContactControlService } from './contact-control.service';
+import {FormBase} from './form-base';
+import {ContactControlService} from './contact-control.service';
 import * as FileSaver from "file-saver";
 
 @Component({
 	selector: 'app-dynamic-form',
 	templateUrl: './dynamic-form.component.html',
-	providers: [ ContactControlService ]
+	providers: [ContactControlService]
 })
 export class DynamicFormComponent implements OnInit {
 
@@ -16,7 +16,8 @@ export class DynamicFormComponent implements OnInit {
 	form!: FormGroup;
 	payLoad = '';
 
-	constructor(private qcs: ContactControlService) {}
+	constructor(private qcs: ContactControlService) {
+	}
 
 	ngOnInit() {
 		this.form = this.qcs.toFormGroup(this.fields as FormBase<string>[]);

@@ -1,13 +1,14 @@
-import { Injectable } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {Injectable} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
-import { FormBase } from './form-base';
+import {FormBase} from './form-base';
 
 @Injectable()
 export class ContactControlService {
-	constructor() { }
+	constructor() {
+	}
 
-	toFormGroup(fields: FormBase<string>[] ) {
+	toFormGroup(fields: FormBase<string>[]) {
 		const group: any = {};
 
 		fields.forEach(field => {

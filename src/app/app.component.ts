@@ -1,18 +1,18 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
-import { ContactService } from './contact.service';
-import { FormBase } from './form-base';
-import { Observable } from 'rxjs';
+import {ContactService} from './contact.service';
+import {FormBase} from './form-base';
+import {Observable} from 'rxjs';
 
 @Component({
 	selector: 'app-root',
 	template: `
-    <div>
-      <h2>Contact</h2>
-      <app-dynamic-form [fields]="fields$ | async"></app-dynamic-form>
-    </div>
-  `,
-	providers:  [ContactService]
+		<div>
+			<h2>Contact</h2>
+			<app-dynamic-form [fields]="fields$ | async"></app-dynamic-form>
+		</div>
+	`,
+	providers: [ContactService]
 })
 export class AppComponent {
 	fields$: Observable<FormBase<any>[]>;

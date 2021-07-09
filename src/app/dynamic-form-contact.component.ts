@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import {Component, Input} from '@angular/core';
+import {FormGroup} from '@angular/forms';
 
-import { FormBase } from './form-base';
+import {FormBase} from './form-base';
 
 @Component({
 	selector: 'app-question',
@@ -10,5 +10,8 @@ import { FormBase } from './form-base';
 export class DynamicFormContactComponent {
 	@Input() field!: FormBase<string>;
 	@Input() form!: FormGroup;
-	get isValid() { return this.form.controls[this.field.key].valid; }
+
+	get isValid() {
+		return this.form.controls[this.field.key].valid;
+	}
 }
